@@ -1,0 +1,154 @@
+/* Base styles for large screens (laptops, desktops) */
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: rgb(250, 218, 179);
+   
+}
+
+h1 {
+    background-color: #081b31;
+    color: white;
+    height: 5rem;
+    text-align: center;
+    line-height: 5rem;
+    text-decoration: underline;
+}
+
+.choice {
+    height: 165px;
+    width: 165px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice:hover {
+    cursor: pointer;
+    background-color: #081b31;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+.score-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 0 2rem;
+    font-size: 2rem;
+    gap: 4rem;
+}
+
+#user-score,
+#comp-score {
+    font-size: 4rem;
+}
+
+.mess {
+    margin-top: 4rem;
+}
+
+#msg {
+    background-color: #081b31;
+    color: aliceblue;
+    margin-top: 5rem;
+    font-size: 2rem;
+    display: inline;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) { /* For tablets and smaller devices */
+    .choice {
+        height: 120px;
+        width: 120px;
+    }
+
+    img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .choices {
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .score-board {
+        font-size: 1.5rem;
+        gap: 2rem;
+    }
+
+    #user-score,
+    #comp-score {
+        font-size: 3rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        height: 4rem;
+        line-height: 4rem;
+    }
+
+    #msg {
+        font-size: 1.5rem;
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) { /* For phones */
+    .choice {
+        height: 90px;
+        width: 90px;
+    }
+
+    img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .choices {
+        flex-direction: column; /* Stack the choices vertically */
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .score-board {
+        flex-direction: column; /* Stack scores vertically */
+        font-size: 1.2rem;
+        gap: 1rem;
+    }
+
+    #user-score,
+    #comp-score {
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+        height: 3rem;
+        line-height: 3rem;
+    }
+
+    #msg {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
+}
